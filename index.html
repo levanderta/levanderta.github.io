@@ -24,7 +24,7 @@ async function loadMenu() {
 }
 
 function processData(json) {
-    const menuItems = json.table.rows.slice(1).map(row => ({
+    const menuItems = json.table.rows.map(row => ({
         productName: row.c[0] ? row.c[0].v : '',
         productDescription: row.c[1] ? row.c[1].v : '',
         productPrice: row.c[2] ? row.c[2].v : '',
